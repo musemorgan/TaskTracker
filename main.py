@@ -8,7 +8,7 @@ app = FastAPI() #defines my new app that im creating
 
 #defining a path
 @app.get("/get-message")
-def root():
+async def read_root():
         return {"Hello" : "World"}
 #def root & return a function ? look more into this
 # lines 10 is a route decorator, defines http location that will serve as the endpoint [in this case get-message]
