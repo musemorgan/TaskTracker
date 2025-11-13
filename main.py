@@ -9,8 +9,8 @@ app = FastAPI()
 # fast api is a webframework, something that helps to simplify api creation [look to see if webframework is just a specialized api?]
 
 # defining a path
-@app.get("/get-message")
-async def read_root():
+@app.get("/")
+def read_root():
         return {"Message": "Congrats! This is your first API"}
 # def root & return a function ? look more into this
 # lines 10 is a route decorator, defines http location that will serve as the endpoint [in this case get-message]
