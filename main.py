@@ -1,5 +1,7 @@
 # This will serve as the main coding elements for my personal task tracker project
 
+### attempt Phase I ###
+
 # Importing the FastAPI class from fastapi module, look into what module is?
 #from fastapi import FastAPI 
 
@@ -16,11 +18,13 @@
 # lines 10 is a route decorator, defines http location that will serve as the endpoint [in this case get-message]
 # what is placed above works in the terminal and postman, is the sole purpose of postman for checking?
 
+### attempt Phase II ###
+
 # passing a parameter
 from fastapi import FastAPI
 
 app = FastAPI()
 
-@app.get("/get-message ")
+@app.get("/get-message")
 def hello(name: str):
     return {'Message': "Congrats " + name + '! This is your first API!'}
