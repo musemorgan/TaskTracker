@@ -15,5 +15,3 @@ def read_root():
 # def root & return a function ? look more into this
 # lines 10 is a route decorator, defines http location that will serve as the endpoint [in this case get-message]
 # what is placed above works in the terminal and postman, is the sole purpose of postman for checking?
-
-@app.get("/")
