@@ -2,14 +2,13 @@
 
 # Importing the FastAPI class from fastapi module, look into what module is?
 from fastapi import FastAPI 
-# similar to SQL, but not sure of significance
 app = FastAPI() 
-#defines my new app that im creating
+# 5 defines my new app that im creating
 # app is an object, it is where interaction between the client and browser take place
 # fast api is a webframework, something that helps to simplify api creation [look to see if webframework is just a specialized api?]
 
 # defining a path
-@app.get("/")
+@app.get("/get-message")
 def read_root():
         return {"Message": "Congrats! This is your first API"}
 # def root & return a function ? look more into this
