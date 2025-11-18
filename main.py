@@ -22,9 +22,9 @@
 
 # passing a parameter
 from fastapi import FastAPI
-
-app = FastAPI() # assists with routing to the correct endpoint, connects the class and stores it in variable app
-
-@app.get("/get-message") # get something from your app, 
+# assists with routing to the correct endpoint, connects the class and stores it in variable app (below)
+app = FastAPI() 
+# get something from your app, (below)
+@app.get("/get-message") 
 def hello(name: str):
     return {'Message': "Congrats " + name + '! This is your first API!'}
