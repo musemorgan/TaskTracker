@@ -30,9 +30,8 @@ app = FastAPI()
 async def read_root():
     return {"Message": "Congrats! This is your first API!"}
 
-static_string = "Vibrainiac"
-@app.post("/add")
-async def add_text(text: str):
-    global static_string
-    static_string += text
-    return {"Message": "Text changed", "current_string": static_string}
+
+@app.post("/internships")
+async def create_item(internship: str):
+    internship.append(internship)
+    return internship
