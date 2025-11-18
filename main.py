@@ -15,7 +15,7 @@
 #def read_root():
 #       return {"Message": "Congrats! This is your first API"}
 # def root & return a function ? look more into this
-# lines 10 is a route decorator, defines http location that will serve as the endpoint [in this case get-message]
+# lines 14 is a route decorator, defines http location that will serve as the endpoint [in this case get-message]
 # what is placed above works in the terminal and postman, is the sole purpose of postman for checking?
 
 ### attempt Phase II ###
@@ -23,8 +23,8 @@
 # passing a parameter
 from fastapi import FastAPI
 
-app = FastAPI()
+app = FastAPI() # assists with routing to the correct endpoint, connects the class and stores it in variable app
 
-@app.get("/get-message")
+@app.get("/get-message") # get something from your app, 
 def hello(name: str):
     return {'Message': "Congrats " + name + '! This is your first API!'}
