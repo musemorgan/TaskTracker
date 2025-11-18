@@ -32,6 +32,6 @@ async def read_root():
 
 
 @app.post("/internships")
-async def create_item(internship: str):
+async def create_internship(internship: str):
     internship.append(internship)
     return internship
