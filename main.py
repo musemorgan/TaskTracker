@@ -26,6 +26,13 @@ from fastapi import FastAPI
 
 app = FastAPI() 
 
-@app.get("/get-message") 
+@app.get("/message") 
 async def read_root():
     return {"Message": "Congrats! This is your first API!"}
+
+static_string = "Vibrainiac"
+@app.post("/add")
+async def add_text(text: str):
+    global static_string
+    static_string += text
+    return {"Message": "Text changed", "current_string": static_string}
