@@ -33,5 +33,13 @@ async def read_root():
 
 @app.post("/internships")
 async def create_internship(internship: str):
-    internship.append(internship)
-    return internship
+    internships.append(internship)
+    return internships
+
+
+
+
+
+# Notes:
+# expectations are that you know a very minimal portion of information, so ask as many questions as possible
+# commits are used for specific tasks and have detailed names to assist with finding specific tasks
